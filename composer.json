@@ -1,7 +1,12 @@
 {
     "name": "dewan/dewan-sql-seeder",
     "description": "laravel sql file seed",
-    "type": "composer-plugin",
+    "keywords": [
+        "Shamim Dewan",
+        "laravel",
+        "dewan-sql-seeder"
+    ],
+    "homepage": "https://github.com/shamimdewan390/dewan-sql-seeder",
     "license": "MIT",
     "autoload": {
         "psr-4": {
