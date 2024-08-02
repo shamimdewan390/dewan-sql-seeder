@@ -6,5 +6,5 @@ here is doc
 ## Installation
 
 ```
-composer require shamim/dewan-sql-seeder
+composer require dewan/dewan-sql-seeder
 ```

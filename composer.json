@@ -1,5 +1,5 @@
 {
-    "name": "shamim/dewan-sql-seeder",
+    "name": "dewan/dewan-sql-seeder",
     "description": "laravel sql file seed",
     "type": "composer-plugin",
     "license": "MIT",
