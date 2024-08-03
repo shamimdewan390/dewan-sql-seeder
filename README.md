@@ -7,13 +7,13 @@ here is doc
 
 > Run this command for install package.
 
-```
+```bash
 composer require dewan/dewan-sql-seeder
 ```
 
 > Run this command for config publish.
 
-```
+```bash
 php artisan vendor:publish --tag=dewan-sql-seeder-config --force
 ```
 
@@ -44,6 +44,9 @@ php artisan vendor:publish --tag=dewan-sql-seeder-config --force
 
 ### Step- 5
 > Run command:  
-``` php artisan dewan:sql-seed```
+
+```javascript
+php artisan dewan:sql-seed
+```
 
 > The command copy all sql file to public/sql directory then run migrate:fresh and seed all data form sql file.
