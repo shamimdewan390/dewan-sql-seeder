@@ -29,7 +29,7 @@ class ImportSqlDataCommand extends Command
 
         info('Copying necessary files for seeding....');
 
-        (new Filesystem)->copyDirectory(database_path('dewan/sql'), public_path('sql'));
+        (new Filesystem)->copyDirectory(config('sql-seeder.sql_file_path'), public_path('sql'));
         
         info('File copying successful');
         

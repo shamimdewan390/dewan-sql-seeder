@@ -8,6 +8,17 @@ use Shamim\DewanSqlSeeder\Console\Commands\ImportSqlDataCommand;
 
 class DewanSqlSeederServiceProvider extends ServiceProvider
 {
+
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        $this->mergeConfigFrom(
+            __DIR__ . '/config/sql-seeder.php',
+            'sql-seeder'
+        );
+    }
     /**
      * Bootstrap any package services.
      */
@@ -19,6 +30,9 @@ class DewanSqlSeederServiceProvider extends ServiceProvider
                 ImportSqlDataCommand::class,
             ]);
         }
+
+        $this->publishes([
+            __DIR__ . '/config/sql-seeder.php' => config_path('sql-seeder.php'),
+        ]);
     }
-    
 }
