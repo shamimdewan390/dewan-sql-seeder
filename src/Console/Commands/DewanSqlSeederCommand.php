@@ -4,6 +4,8 @@ namespace Shamim\DewanSqlSeeder\Console\Commands;
 
 use Illuminate\Console\Command;
 
+use function Laravel\Prompts\{confirm, info};
+
 class DewanSqlSeederCommand extends Command
 {
     /**
@@ -11,7 +13,7 @@ class DewanSqlSeederCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'dewan:sql-seeder';
+    protected $signature = 'dewan:sql-seed';
 
     /**
      * The console command description.
@@ -28,14 +30,19 @@ class DewanSqlSeederCommand extends Command
     
     public function handle()
     {
-        $this->info('Database seeding started...');
+        info('If Yes! then it will erase all of your data.');
+        info('And seeding all data from sql files.');
+        if (confirm('Are you sure! ')) {
 
-        info('start');
-        $this->call('migrate:fresh');
-        $this->call('dewan:seed');
-        info('end');
+            info('Dropping all tables started...');
+            $this->call('migrate:fresh');
+            info('Dropping all tables ended...');
 
-        $this->info('Database seeding completed.');
-        return 0;
+            info('Database seeding started...');
+            $this->call('dewan:seed');
+            
+            info('Database seeding completed.');
+            return 0;
+        }
     }
 }
