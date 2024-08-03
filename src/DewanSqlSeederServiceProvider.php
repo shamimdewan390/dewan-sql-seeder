@@ -31,8 +31,9 @@ class DewanSqlSeederServiceProvider extends ServiceProvider
             ]);
         }
 
+        // Publish the configuration file.
         $this->publishes([
             __DIR__ . '/config/sql-seeder.php' => config_path('sql-seeder.php'),
-        ]);
+        ], 'dewan-sql-seeder-config');
     }
 }

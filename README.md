@@ -5,9 +5,18 @@ here is doc
 
 ## Installation
 
+> Run this command for install package.
+
 ```
 composer require dewan/dewan-sql-seeder
 ```
+
+> Run this command for config publish.
+
+```
+php artisan vendor:publish --tag=dewan-sql-seeder-config --force
+```
+
 ## Basic use
 
 ### Step- 1
